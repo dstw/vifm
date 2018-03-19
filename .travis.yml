@@ -48,8 +48,3 @@ after_success:
  - if [ "$COVERITY_SCAN_BRANCH" != 1 -a "$CC" = gcc ]; then
      coveralls --encoding iso-8859-1 --build-root src/ --exclude tests --gcov-options '\-p';
    fi
-
-notifications:
-  email:
-    recipients:
-      - xaizek@posteo.net
